@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<title>Grid of Images</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  	
+
+</head>
+
+​
+
+<style>
+	body{
+		background-image: url('images/background.jpg');
+	}
+	header{
+		padding: 1%;
+		font-weight: bolder;
+		font-size: 30px;
+		text-align: center;
+		background-color: black;
+		color: white;
+		width: 100%;
+	}
+	#maindiv{
+		width: auto;
+		height: auto;
+		margin: 5%;
+	}
+
+
+@media (min-width: 320px) and (max-width: 599px){
+	
+	#collection{
+		position: absolute;
+		top: 15%;
+		left: 6%;
+		height: 35%;
+		width: 27%;
+	}
+	#logo{
+		position: absolute;
+		top: 37%;
+		left: 6%;
+		height: 7%;
+		width: 27%;
+	}
+	#company{
+		position: absolute;
+		top: 15%;
+		left: 38%;
+		height: 80%;
+		width: 55%;
+	}
+	#media{
+		position: absolute;
+		top: 45.5%;
+		left: 6%;
+		width: 87%;
+	}
+	#export{
+		position: absolute;
+		top: 62%;
+		left: 6%;
+		width: 60%;
+	}
+	#social{
+		position: absolute;
+		top: 62%;
+		left: 70%;
+		height: 25%;
+		width: 23%;
+	}
+	#life{
+		position: absolute;
+		top: 88.7%;
+		left: 6%;
+		width: 87%;
+	}
+	#contact{
+		position: absolute;
+		top: 105%;
+		left: 6%;
+		width: 38%;
+	}
+	#fb,#google,#li{
+		position: absolute;
+		top: 105%;
+		width: 12%;
+		height: 6%;
+	}
+	#pin,#insta,#you{
+		position: absolute;
+		top: 112.5%;
+		width: 12%;
+		height: 6%;
+	}
+	#fb,#you{
+		left: 50%;
+	}
+	#google,#insta{
+		left: 65.5%;
+	}
+	#li,#pin{
+		left: 80.5%;
+	}
+	i{
+		padding: 1%;
+		color: white;
+		margin: 38% 35%;
+	}
+
+}
+
+@media (min-height:500px) and (max-height:742px){
+	#logo{
+		position: absolute;
+		top: 43.2%;
+	}
+	#media{
+		position: absolute;
+		top: 53%;
+	}
+	#export{
+		position: absolute;
+		top: 73.5%;
+	}
+	#social{
+		position: absolute;
+		top: 73.5%;
+		height: 30.3%;
+	}
+	#life{
+		position: absolute;
+		top: 106.5%;
+	}
+	#contact{
+		position: absolute;
+		top: 127%;
+	}
+	#fb,#google,#li{
+		position: absolute;
+		top: 127%;
+		height: 7.5%;
+	}
+	#you,#pin,#insta{
+		position: absolute;
+		top: 136%;
+		height: 7.5%;
+	}
+}
+
+@media (min-width: 600px){
+	img{
+		padding: 10px;
+		width: 100%;
+		height: 100%;
+	}
+
+	#collection{
+		position: absolute;
+		top: 15%;
+		left: 5%;
+		height: 68%;
+		width: 25%;
+	}
+
+	#logo{
+		position: absolute;
+		top: 15%;
+		left: 30%;
+		height: 10%;
+		width: 24%;
+	}
+
+	#company{
+		position: absolute;
+		left: 30%;
+		top: 25%;
+		height: 60%;
+		width: 23.9%;
+	}
+
+	#media{
+		position: absolute;
+		top: 15%;
+		left: 54%;
+		width: 40%;
+		height: 30%;
+	}
+
+	#export{
+		position: absolute;
+		left: 54%;
+		top: 27%;
+		height: 46%;
+		width: 27%;
+	}
+
+	#social{
+		position: absolute;
+		top: 27%;
+		left: 81%;
+		height:18.3%;
+		width: 13%;
+	}
+
+	#life{
+		position: absolute;
+		top: 45%;
+		left: 5%;
+		height: 31.5%;
+		width: 43%;
+	}
+
+	#contact{
+		position: absolute;
+		left: 47.7%;
+		width: 25%;
+		height: 13%;
+		top: 45%;
+	}
+
+	#fb, #google, #li, #you, #insta, #pin{
+		width: 5%;
+		height: 4.7%;
+		color:white;
+	}
+
+	#fb{
+		position: absolute;
+		top: 46%;
+		left: 73.8%;
+	}
+
+	#google{
+		position: absolute;
+		top: 46%;
+		left: 80.7%;
+	}
+
+	#li{
+		position: absolute;
+		top: 46%;
+		left: 87.6%;	
+	}
+
+	#you{
+		position: absolute;
+		top: 52.3%;
+		left: 73.8%;
+	}
+
+	#insta{
+		position: absolute;
+		top: 52.3%;
+		left: 80.7%;
+	}
+
+	#pin{
+		position: absolute;
+		top: 52.3%;
+		left: 87.6%;
+	}
+
+	i{
+		padding: 1%;
+		color: white;
+		margin: 38% 35%;
+	}
+}
+
+
+@media (min-width: 1200px) {
+	img{
+		padding: 10px;
+		width: 100%;
+		height: 100%;
+	}
+
+	#collection{
+		position: absolute;
+		top: 20%;
+		left: 5.5%;
+		height: 64%;
+		width: 21%;
+	}
+
+	#logo{
+		position: absolute;
+		top: 20%;
+		left: 26%;
+		height: 22%;
+		width: 21%;
+	}
+
+	#company{
+		position: absolute;
+		left: 26%;
+		top: 41%;
+		height: 48%;
+		width: 21%;
+	}
+
+	#media{
+		position: absolute;
+		top: 20%;
+		left: 46.5%;
+		width: 40%;
+		height: 29%;
+	}
+
+	#export{
+		position: absolute;
+		left: 46.5%;
+		top: 50.3%;
+		height: 42.1%;
+		width: 21.1%;
+	}
+
+	#social{
+		position: absolute;
+		top: 20%;
+		left: 86%;
+		height:31.3%;
+		width: 7%;
+	}
+
+	#life{
+		position: absolute;
+		top: 50.3%;
+		left: 67.2%;
+		height: 12%;
+		width: 25.8%;
+	}
+
+	#contact{
+		position: absolute;
+		left: 67.2%;
+		width: 11.5%;
+		height: 18.8%;
+		top: 70.3%;
+	}
+
+	#fb, #google, #li, #you, #insta, #pin{
+		width: 3.5%;
+		height: 6.7%;
+		color:white;
+	}
+
+	#fb{
+		position: absolute;
+		top: 71.7%;
+		left: 79%;
+	}
+
+	#google{
+		position: absolute;
+		top: 71.7%;
+		left: 83.8%;
+	}
+
+	#li{
+		position: absolute;
+		top: 71.7%;
+		left: 88.7%;	
+	}
+
+	#you{
+		position: absolute;
+		top: 80.8%;
+		left: 79%;
+	}
+
+	#insta{
+		position: absolute;
+		top: 80.8%;
+		left: 83.8%;
+	}
+
+	#pin{
+		position: absolute;
+		top: 80.8%;
+		left: 88.7%;
+	}
+
+	i{
+		padding: 1%;
+		color: white;
+		margin: 30% 40%;
+	}
+}
+
+/*@media (max-height: 568px) and (max-width: 320px){
+	#collection{
+		position: absolute;
+		padding: 10px;
+		width:33%;
+		height: 7.5%;
+		left: 3%;
+	}
+	#logo{
+		position: absolute;
+		padding: 10px;
+		top: 42%;
+		left: 3%;
+		width: 33.5%;
+		height: 9.5%;
+	}
+	#company{
+		position: absolute;
+		padding: 10px;
+		left: 35%;
+		height: 42%;
+		width: 59.5%;
+	}
+	#media{
+		position: absolute;
+		padding: 10px;
+		top: 51%;
+		left: 3%;
+		width: 91.5%;
+	}
+	#export{
+		position: absolute;
+		padding: 10px;
+		top: 71%;
+		left: 3%;
+		width: 65%;
+		height: 65%;
+	}
+	#social{
+		position:absolute;
+		padding: 10px;
+		top: 71%;
+		left: 67%;
+		width: 27.5%;
+		height: 33%;
+	}
+	#life{
+		position: absolute;
+		padding: 10px;
+		top: 103.5%;
+		left: 3%;
+		width: 91.5%;
+	}
+	#contact{
+		position: absolute;
+		padding: 10px;
+		top: 124%;
+		left: 3%;
+		width: 45%;
+		height: 25%;
+	}
+	#fb, #google, #li, #you, #insta, #pin{
+		color:white;
+		width: 11%;
+		height: 9.5%;
+	}
+	#fb{
+		position: absolute;
+		top: 125.5%;
+		left: 49.5%;
+		
+	}
+	#google{
+		position: absolute;
+		top: 125.5%;
+		left: 65.5%;
+	}
+	#li{
+		position: absolute;
+		top: 125.5%;
+		left: 80.5%;
+	}
+	#you{
+		position: absolute;
+		top: 138%;
+		left: 49.5%;
+	}
+	#insta{
+		position: absolute;
+		top: 138%;
+		left: 65.5%;
+	}
+	#pin{
+		position: absolute;
+		top: 138%;
+		left: 80.5%;
+	}
+	i{
+		margin: 55% 38%;
+	}
+}
+*/
+/*@media (max-height: 800px) and (min-height: 650px){
+	#logo{
+		position: absolute;
+		top: 36%;
+		height: 8.6%;
+	}
+	#media{
+		position: absolute;
+		top: 44%;
+	}
+	#export{
+		position: absolute;
+		top: 61.3%;
+	}
+	#social{
+		position: absolute;
+		top: 61.3%;
+		height: 28.7%;
+	}
+	#life{
+		position: absolute;
+		top: 89.5%;
+	}
+	#contact{
+		position: absolute;
+		top: 107.3%;
+		height: 20%;
+	}
+	#fb,#google,#li{
+		position: absolute;
+		top: 109%;
+		height: 7%;
+	}
+	#pin,#you,#insta{
+		position: absolute;
+		top: 119%;
+		height: 7%;
+	}
+}
+*/
+
+
+
+</style>
+
+
+<body>
+	<header>
+		Grid of Images
+	</header>
+
+	<section>
+		<div id="maindiv">
+
+			<div class="carousel slide" data-ride="carousel" id="collection" data-interval="2000">
+				<div class="carousel-inner">
+             
+                	<div class="item active">
+                		<img src="images/collections1.png">
+              		</div>
+
+              		<div class="item">
+                		<img src="images/collections2.png">
+              		</div>
+
+              		<div class="item">
+                		<img id="col3" src="images/collections3.png">
+              		</div>
+				</div>
+			</div>
+
+			<div>
+				<img id="logo" src="images/logo1.jpg" alt="logo">
+			</div>
+
+			<div class="carousel slide" data-ride="carousel" id="company" data-interval="3000">
+				<div class="carousel-inner">
+             
+                	<div class="item active">
+                		<img src="images/company1.png">
+              		</div>
+
+              		<div class="item">
+                		<img src="images/company2.png">
+              		</div>
+				</div>
+			</div>
+
+			<div class="carousel slide" data-ride="carousel" id="media" data-interval="3000">
+				<div class="carousel-inner">
+             
+                	<div class="item active">
+                		<img src="images/media1.png">
+              		</div>
+
+              		<div class="item">
+                		<img src="images/media2.png">
+              		</div>
+				</div>
+			</div>
+
+			<div class="carousel slide" data-ride="carousel" id="export" data-interval="2000">
+				<div class="carousel-inner">
+             
+                	<div class="item active">
+                		<img src="images/export1.png">
+              		</div>
+
+              		<div class="item">
+                		<img src="images/export2.png">
+              		</div>
+				</div>
+			</div>
+
+			<div>
+				<img id="social" src="images/social.png" alt="image">
+			</div>
+
+			<div class="carousel slide" data-ride="carousel" id="life" data-interval="4000">
+				<div class="carousel-inner">
+             
+                	<div class="item active">
+                		<img src="images/life1.png">
+              		</div>
+
+              		<div class="item">
+                		<img src="images/life2.png">
+              		</div>
+
+              		<div class="item">
+                		<img src="images/life3.png">
+              		</div>
+				</div>
+			</div>
+
+			<div>
+				<img id="contact" src="images/contact.jpeg" alt="contact">
+			</div>
+
+
+			<div>
+				<div id="fb" style="background-color: #475593"><i class="fa fa-facebook"></i></div>
+  				<div id="google" style="background-color: #dc4e41"><i class="fa fa-google-plus"></i></div>
+  				<div id="li" style="background-color: #007ab9"><i class="fa fa-linkedin"></i></div>
+  				<div id="you" style="background-color:  #f61c0d"><i class="fa fa-youtube"></i></div>
+  				<div id="insta" style="background-color: #9900ff"><i class="fa fa-instagram"></i></div>
+  				<div id="pin" style="background-color:#cb2027"><i class="fa fa-pinterest-p"></i></div>
+  			</div>
+
+		</div>
+
+	</section>
+
+</body>
+
+</html>
+
