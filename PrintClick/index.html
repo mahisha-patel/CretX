@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>
+		Print Clicks
+	</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="main.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css"> -->
+</head>
+
+<style>
+	p{
+	color: blue;
+	font-size: 20px;
+	background-color: lightblue;
+	padding: 10px;
+	}
+</style>
+
+
+<body>
+	<section>
+		<div>
+			<p>
+				Click on the webpage and check the console log.
+			</p>
+		</div>
+	</section>
+</body>
+
+<script>
+	var count = 0
+	$(document).ready(function(){
+  	$("html").click(function(){
+    	count+=1;
+    	if(count==1)
+			console.log("You clicked " +count +" time on the webpage.");
+		else
+			console.log("You clicked " +count +" times on the webpage.");
+  	});
+});
+
+
+
+</script>
+
+</html>
