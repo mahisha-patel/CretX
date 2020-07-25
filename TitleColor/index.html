@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>
+		Header Title Color
+	</title>
+	<!-- <script type="text/javascript" src="main.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css"> -->
+</head>
+
+<style>
+	#para{
+	font-weight: bolder;
+	font-size: 20px;
+	padding: 10px;
+	}
+	p{
+		padding: 10px;
+	}
+</style>
+
+
+<body>
+	<header>
+		<p id="para">
+			This is the title of the header!!
+		</p>
+		<p>
+			Wait for few seconds.
+		</p>
+	</header>
+
+</body>
+
+<script>
+	setInterval(function(){
+	document.getElementById("para").style.color = "red";
+	document.getElementById("para").style.backgroundColor = "black";
+	setTimeout(function(){
+	document.getElementById("para").style.color = "white";
+	document.getElementById("para").style.backgroundColor = "red";
+	setTimeout(function(){
+	document.getElementById("para").style.color = "lightgreen";
+	document.getElementById("para").style.backgroundColor = "grey";
+	setTimeout(function(){
+	document.getElementById("para").style.color = "black";
+	document.getElementById("para").style.backgroundColor = "blue";	
+	},2000);
+	},2000);
+	},2000);
+},8000);
+
+
+</script>
+
+
+</html>
